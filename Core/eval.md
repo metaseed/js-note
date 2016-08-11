@@ -28,4 +28,33 @@ number; // 3
 ## Security
 it executes any code given to it
 
-refer to setTimeout and setInterval
+## setTimeout and setInterval
+
+```javascript
+function foo() {
+    // will get called
+}
+
+function bar() {
+    function foo() {
+        // never gets called
+    }
+    setTimeout('foo()', 1000);
+}
+bar();
+
+// setTimeout and setInterval can also take a string as their first parameter. 
+// it internally makes use of eval
+
+```
+
+```javascript
+function foo(a, b, c) {}
+// NEVER use this, it is a clear sign of really bad code
+setTimeout('foo(1, 2, 3)', 1000)
+
+// Instead use an anonymous function
+setTimeout(function() {
+    foo(1, 2, 3);
+}, 1000)
+```
