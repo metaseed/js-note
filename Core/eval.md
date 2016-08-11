@@ -1,6 +1,7 @@
 The use of eval should be avoided. 99.9% of its "uses" can be achieved without it.
 > eval only executes in the local scope when it is being called directly and 
 > when the name of the called function is actually eval
+
 ```javascript
 var number = 1;
 function test() {
