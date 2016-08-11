@@ -1,4 +1,6 @@
-
+* == and === are called equality operators.
+* === is strict equality operator.
+## Primitave types
 bool -> string -> number
 ```javascript
 ""           ==   "0"           // false: same type as '==='
@@ -13,8 +15,8 @@ null         ==   undefined     // true: null == undefined
 " \t\r\n"    ==   0             // true: string to number
 ```
 
-> the use of == is widely regarded as bad practice.
-> performance impact of '==': a string has to be converted to a number before it can be compared to another number.
+> 1. the use of == is widely regarded as bad practice.
+> 2. performance impact of '==': type conversion: bool -> string -> number
 
 ```javascript
 ""           ===   "0"           // false
@@ -27,3 +29,15 @@ false        ===   null          // false
 null         ===   undefined     // false
 " \t\r\n"    ===   0             // false
 ```
+## With Objects
+```javascript
+{} === {};                   // false
+new String('foo') === 'foo'; // false
+new Number(10) === 10;       // false
+var foo = {};
+foo === foo;                 // true
+```
+## Conclution
+1. use ===
+2. explicitly convert(coerce) types with need
+
