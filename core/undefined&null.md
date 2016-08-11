@@ -1,3 +1,4 @@
+## undefined
 
 1. undefined is a **type** with exactly one value: undefined. 
 2. javascript also defines undefined is a global variable(a property of the global object) *undefined* that has the value of undefined.
@@ -19,7 +20,7 @@
     * Anything that has been set to the value of undefined.
     * Any expression in the form of void(expression)
 
-## Attention
+### Attention
 
 ```javascript
 //DON'T DO THIS
@@ -67,7 +68,7 @@ if (y === void 0) {
 > var foo = null; foo
 "null"
 ```
-### Diffenence
+## Diffenence
 ```javascript
 typeof null        // object (bug in ECMAScript, should be null)
 typeof undefined   // undefined
