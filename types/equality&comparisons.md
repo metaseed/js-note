@@ -2,6 +2,7 @@
 * == and === are called equality operators.
 * === is strict equality operator.
 * for ==: as JavaScript is a weakly typed language
+
 ## Primitave types
 
 '==': bool to number, string to number, null == undefined
