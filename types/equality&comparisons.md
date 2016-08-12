@@ -1,6 +1,6 @@
 
 * == and === are called equality operators. sometime we call them equality (==) and identity (===) operators.
-* === is strict equality operator; == is standard equality operator.
+* === is *strict* equality operator; == is *standard* equality operator.
 * for ==: as JavaScript is a weakly typed language
 
 ## Primitave types
