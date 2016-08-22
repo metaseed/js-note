@@ -28,9 +28,9 @@
 ### Attention
 
 ```javascript
-//DON'T DO THIS
-// it is possible to use it as an identifier (variable name) in any scope
-// other than the global scope (because undefined is not a reserved word)
+// DON'T DO THIS
+// it is possible to use it as an identifier (variable name) in any scope other than the global scope
+// (because undefined is not a reserved word)
 (function(){ var undefined = 'foo'; console.log(undefined, typeof undefined); })(); // logs "foo string"
 (function(undefined){ console.log(undefined, typeof undefined); })('foo');// logs "foo string"
 ```
