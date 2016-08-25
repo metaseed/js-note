@@ -56,10 +56,14 @@ var bar = Object.create(foo, {
   });
 
 console.log(bar.__proto__ === foo); //true
-console.log(bar.a); // 10 - Inherited property
-console.log(bar.b); //20 - Own porperty
 console.log(foo instanceof Object); // true, foo inherits from Object
 console.log(bar instanceof Object); // true, bar inherits from Object
+console.log(bar.a); // 10 - Inherited property
+console.log(bar.b); //20 - Own porperty
+console.log(bar.hasOwnProperty('a')); // false;
+bar.a = 10;
+console.log(bar.hasOwnProperty('a')); // true;
+console.log(bar.a); // 10 - Own property
 ```
 
 <a href="https://raw.githubusercontent.com/rus0000/jsinheritance/master/images/simple-object.png" target="_blank"><img src="./images/simple-object.png"  width="800" height="600" alt="Creating simple objects with inheritance" title="Creating simple objects with inheritance"></a>

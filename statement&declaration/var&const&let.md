@@ -1,3 +1,23 @@
+
+## var
+
+* function-scoped
+* hoist to the top of its function
+* redeclarations of the same name in the same scope are no-ops
+
+## const
+
+* function-scoped
+* hoist to the top of its function
+* redeclarations of the same name in the same scope are rejected
+
+## let
+
+* block-scoped
+* hoist to the top of its block (not in ECMAScript 6!)
+* redeclarations illegal
+* behaves exactly the same as vars at function top-level (i.e. can be redeclared at function top-level even though cannot be elsewhere)
+
 ```javascript
 var a = 1;
 var b = 2;
@@ -62,3 +82,6 @@ function go(n){
 
 go({a:[1,2,3]});
 ```
+
+### reference
+https://developer.mozilla.org/en-US/docs/Archive/Web/Scope_Cheatsheet
