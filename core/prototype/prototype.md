@@ -25,7 +25,7 @@
   * That happens **before** any code execution even begins, just after code parsing
 * `function` object can be accessed just using function name without parenthesis, for example `myFunction`
 * `prototype` object can be accessed using `prototype` property of `function` object, for example `myFunction.prototype`
-* Functions, which are intended to be used as constructors, just called `constructor functions`. Tey have to be invoked with a `new` keyword to construct a new object
+* Functions, which are intended to be used as constructors, just called `constructor functions`. They have to be invoked with a `new` keyword to construct a new object
 * Any function can be invoked as a constructor, but this doesn't mean it *should* be invoked as a constructor
 * By convention, constructor functions are named with `PascalCase`, all other functions are named with `camelCase`
 * `prototype` object is used by JavaScript, when function is invoked as a `constructor` (with `new` keyword) to initialize newly constructed object `__proto__` property
