@@ -24,6 +24,14 @@ function f2(){
 }
 f2() === undefined; // true
 window.f2() === window // true
+
+let obj = {
+  fun:function (){
+  'use stric';
+   return this;
+   }
+}
+obj.fun() === obj;
 ```
 
 ### Arrow functions
@@ -80,7 +88,7 @@ console.log(o.b.g()); // logs 42
 ```
 #### this on the object's prototype chain
 ```JavaScript
-var o = {f:function(){ return this.a + this.b; }};
+var o = {a: 3, b: 6, f:function(){ return this.a + this.b; }};
 var p = Object.create(o);
 p.a = 1;
 p.b = 4;

@@ -3,9 +3,9 @@
 * === is *strict* equality operator; == is *standard* equality operator.
 * for ==: as JavaScript is a weakly typed language
 
-## Primitave types
+'==': bool ToNumber, string ToNumber, null == undefined, object ToPrimitive (call toString and valueOf)
 
-'==': bool to number, string to number, null == undefined
+## Primitave types
 
 ```javascript
 ""           ==   "0"           // false: same type as '==='
@@ -27,7 +27,7 @@ isNaN(null)  ==   false;        // true: null to 0
 ```
 
 > 1. the use of == is widely regarded as bad practice.
-> 2. performance impact of '==': type conversion: bool -> string -> number
+> 2. performance impact of '==': type conversion
 
 ```javascript
 ""           ===   "0"           // false
@@ -38,7 +38,9 @@ false        ===   "0"           // false
 false        ===   undefined     // false
 false        ===   null          // false
 null         ===   undefined     // false
-" \t\r\n"    ===   0             // false
+NaN          ===   NaN           // false  Object.is(NaN, NaN) true
+" \t\r\n"    ===   0             // false  Object.is(+0, -0) false
++0           ===   -0            // true
 ```
 ## With Objects
 
@@ -54,7 +56,7 @@ new Number(10) + 0 === 10;      // True, due to implicit conversion
 ## Conclution
 
 1. use ===
-2. explicitly convert(coerce, cast) types with need:
+2. explicitly convert(coerce, cast) types when need:
     ```javascript
     '' + 10 === '10';       // true: + to sting.
     +'10' === 10;           // true: + to number.
@@ -67,3 +69,8 @@ new Number(10) + 0 === 10;      // True, due to implicit conversion
     !!{};                   // true
     !!true;                 // true
     ```
+##　Sameness Comparisons
+
+
+// https://developer.mozilla.org/en/docs/Web/JavaScript/Equality_comparisons_and_sameness
+// https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
