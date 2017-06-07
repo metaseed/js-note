@@ -112,7 +112,9 @@ Object.defineProperty(o, 'sum', {get: sum, enumerable:true, configurable:true});
 
 console.log(o.average, o.sum); // logs 2, 6
 ```
+
 ### As a constructor
+
 ```JavaScript
 function C(){
   this.a = 37;
@@ -135,6 +137,26 @@ function foo(){
 }
 foo() // window
 new foo() // foo
+
+//-----------
+function f(){
+  this.b = 1;
+}
+
+function C3(){
+  this.b =2;
+  f(); // this object is window
+}
+
+function C4(){
+  this.b =2;
+  f.call(this); //call function that has this in constructor
+}
+
+console.log(new C3().b); // 2;
+console.log(new C4().b); // 1;
+//----------
+
 ```
 
 ### call, apply and bind

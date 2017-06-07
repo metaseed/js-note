@@ -1,7 +1,4 @@
-
-
-
-<a href="https://raw.githubusercontent.com/rus0000/jsinheritance/master/images/Function-Object.png" target="_blank"><img src="./images/Function-Object.png" width="800" height="600" alt="Function - Object relationship" title="Function - Object relationship"></a>
+<a ref="https://raw.githubusercontent.com/rus0000/jsinheritance/master/images/Function-Object.png" target="_blank"><img src="./images/Function-Object.png" width="800" height="600" alt="Function - Object relationship" title="Function - Object relationship"></a>
 #### Objects
 * In JavaScript we have functions and objects
 * There is no `classes` and no `constructors` in a language. ES6 `class` is only a syntactical sugar
@@ -143,7 +140,7 @@ Duck.prototype.quack = function () {
 // Child constructor
 var TalkingDuck = function (name) {
   // Call parent constructor with proper arguments
-  Duck.call(this, name); // This is often forgotten
+  Duck.call(this, name); // This is often forgotten, if call directly the name property value is undefined
 }
 
 // Inheritance

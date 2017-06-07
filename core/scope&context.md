@@ -4,7 +4,7 @@
 ```javascript
 var Module = (function(){
     var privateProperty = 'foo';
-
+    
     function privateMethod(args){
         // do something
     }
