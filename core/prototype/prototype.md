@@ -94,7 +94,9 @@ console.log(bar.readA()); // 20
 console.log(bar.a); // 20 - Reading own porperty of "bar" object
 ```
 <a href="https://raw.githubusercontent.com/rus0000/jsinheritance/master/images/bar.png" target="_blank"><img src="./images/bar.png" width="800" height="600" alt="Creating an object with constructor function" title="Creating an object with constructor function"></a>
-
+* A new object is created, inheriting from Bar.prototype.
+* The constructor function Bar is called with the specified arguments, and with this bound to the newly created object. new Bar is equivalent to new Bar(), i.e. if no argument list is specified, Bar is called without arguments.
+* The object returned by the constructor function becomes the result of the whole new expression. If the constructor function doesn't explicitly return an object, the object created in step 1 is used instead. (Normally constructors don't return a value, but they can choose to do so if they want to override the normal object creation process.)
 
 ## Static methods
 There is no such thing like `static method` in JavaScript spec at all, but this design pattern can easily be implemented by putting properties on a `constructor function` object itself, instead of its `prototype` object.
